@@ -1,0 +1,43 @@
+<html>
+<head>
+	<title>JS foundation Part1 </title>
+<script>
+
+	//1. 
+	var x = [3, 5,'Dojo', 'rocks', {name: 'Michael', title: 'Sensei'}];
+	for (var i= 0; i < x.length; i++ ){
+		console.log( x[i] + ': ' + typeof(x[i]) );
+	}
+
+	//2
+	x.push(100);
+
+	//3
+	console.log(x);
+
+	//4
+	var sum = 0;
+	for ( var i=0; i < 500; i++){
+		sum += i;
+	}
+	console.log(sum);
+
+	//5
+	var d = new Date();
+	var n = d.getTime();
+	var sum =0 ;
+	for ( var i=0; i < 1000000; i++){
+		sum += i;
+	}
+	console.log(sum);
+	var d2 = new Date();
+	var n2 = d2.getTime();
+
+	console.log(n2-n);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

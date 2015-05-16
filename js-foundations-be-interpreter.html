@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>JS Basic Assignemnt 2 </title>
+<script>
+
+// Problem 1
+//console.log(first_variable);//log undefined, removed it
+var first_variable = "Yipee I was first!";
+function firstFunc() {
+  first_variable = "Not anymore!!!";
+  console.log(first_variable)//log locally "Not anymore!!"
+}
+console.log(first_variable);//should log Yipee...
+
+
+// Problem 2
+var food = "Chicken";
+function eat() {
+  food = "half-chicken";
+  console.log(food);//log locally "half-checken"
+  var food = "gone"; 
+}
+eat();//correction: it should log "half-chicken" because var food="gone" only got stored locally, never got returned
+console.log(food);//correction: it should log "Chicken" because anything happens on eat() will only impact when eat() get executed
+
+// Problem 3
+var new1 = "NEW!";
+function lastFunc() {
+  new1 = "old";
+  return new1;
+}
+console.log(lastFunc());//correction: it returns error because new1 is reserved keyword, replace all new to newStuff
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

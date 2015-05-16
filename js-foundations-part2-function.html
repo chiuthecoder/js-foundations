@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>JS Basic Assignemnt 2 </title>
+<script>
+
+var person = {
+	name: "Chiu",
+	distance_travelled: 0,
+	say_name: function(){
+		alert(this.name + " says \'I\'m cool!\'");
+	},
+	say_something: function(word){
+		alert(this.name + " says " + word);
+	},
+	walk: function(){
+		alert( this.name + " is walking "+(this.distance_travelled += 3) +" mile(s).");
+	},
+	run: function(){
+	alert( this.name + " is running "+(this.distance_travelled += 10) +" mile(s).");
+	},
+	crawl: function(){
+	alert( this.name + " is crawling "+(this.distance_travelled += 1) +" mile(s).");
+	},
+	doSomething: function(){
+		var random = Math.floor(Math.random()*3);
+		if (random == 0){
+			//walk
+			console.log('in group 1, walk');
+			return person.walk();
+		}
+		else if(random == 1){
+			//run
+			console.log('in group 2, run');
+			return person.run();
+		}
+		else{
+		console.log('in group 3, crawl');
+		return person.crawl();  
+		}
+	},
+	fly: function(x, y){
+		var random = Math.floor(Math.random()*10);
+		if (random <=2){
+			return x();
+		}
+		else{
+			return y();
+		}
+	}
+};
+
+var x = function(){
+	alert('Eat ice cream!');
+};
+var y = function(){
+	alert('Go to movie!');
+};
+
+person.fly(x, y);
+// person.say_something("you are going to London this summer.");
+// person.doSomething();
+// person.say_name();
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
